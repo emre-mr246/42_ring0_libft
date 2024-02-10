@@ -14,6 +14,8 @@
 
 char	*ft_strchr(char *str, int c)
 {
+	if (!str)
+		return (NULL);
 	if ((unsigned char)c == 0)
 		return (str + ft_strlen(str));
 	while (*str)
