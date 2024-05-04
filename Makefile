@@ -6,7 +6,7 @@
 #    By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 09:44:14 by emgul             #+#    #+#              #
-#    Updated: 2023/12/10 19:45:27 by emgul            ###   ########.fr        #
+#    Updated: 2024/05/04 17:09:03 by emgul            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,47 +43,49 @@ FILES	=	ft_atoi \
 		ft_strtrim \
 		ft_substr \
 		ft_tolower \
-		ft_toupper
-
-BONUS_FILES	=	ft_lstadd_back \
-			ft_lstadd_front \
-			ft_lstclear \
-			ft_lstdelone \
-			ft_lstiter \
-			ft_lstlast \
-			ft_lstmap \
-			ft_lstnew \
-			ft_lstsize \
-
+		ft_toupper	\
+		ft_lstadd_back \
+		ft_lstadd_front \
+		ft_lstclear \
+		ft_lstdelone \
+		ft_lstiter \
+		ft_lstlast \
+		ft_lstmap \
+		ft_lstnew \
+		ft_lstsize \
+		gnl/get_next_line	\
+		gnl/get_next_line_utils	\
+		printf/ft_printf	\
+		printf/ft_format_utilities	\
+		printf/ft_puthex	\
+		printf/ft_putnbr	\
+		printf/ft_putstr	\
+		printf/ft_putunsigned
+		
 NAME	=	libft.a
 CC	=	gcc
 CFLAGS	=	-Wall -Wextra -Werror
 AR	=	ar rcs
 RM	=	rm -f
 
-SRCS	=	$(SRCS_PATH)$(addsuffix .c, $(FILES))
-BONUS_SRCS	=	$(SRCS_PATH), $(addsuffix .c, $(BONUS_FILES))
-
+SRCS	=	$(addsuffix .c, $(FILES))
 OBJS =	$(OBJS_PATH)$(addsuffix .o, $(FILES))
-BONUS_OBJS = $(OBJS_PATH)$(addsuffix .o, $(BONUS_FILES))
 
 .c.o: $(SRCS)
-	$(CC) $(CFLAGS) -c $< -o $@ 
+	@$(CC) $(CFLAGS) -c $< -o $@ 
 
 $(NAME): $(OBJS)
-	$(AR) $@ $^
-
-bonus: $(BONUS_OBJS)
-	$(AR) $(NAME) $^
+	@$(AR) $@ $^
+	make clean
 
 all: $(NAME)
 
 clean:
-	$(RM) $(OBJS) $(BONUS_OBJS)
+	@$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: clean all
 
-.PHONY: bonus all re fclean clean
+.PHONY: all re fclean clean
