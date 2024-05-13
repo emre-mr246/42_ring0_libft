@@ -57,6 +57,5 @@ char	**ft_split(char const *s, char c)
 			s += word_length;
 		}
 	}
-	result[i] = NULL;
-	return (result);
+	return (result[i] = NULL, result);
 }
