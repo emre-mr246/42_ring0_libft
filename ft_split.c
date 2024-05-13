@@ -37,7 +37,7 @@ char	**ft_split(char const *s, char c)
 	size_t	word_length;
 	int		i;
 
-	if (!*s || !c)
+	if (!s || !c)
 		return (NULL);
 	result = (char **)malloc((ft_countwords(s, c) + 1) * sizeof(char *));
 	if (!result)
