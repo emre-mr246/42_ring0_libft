@@ -6,7 +6,7 @@
 #    By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 09:44:14 by emgul             #+#    #+#              #
-#    Updated: 2024/05/04 17:09:03 by emgul            ###   ########.fr        #
+#    Updated: 2024/05/21 16:54:28 by emgul            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,7 @@ FILES	=	ft_atoi \
 		printf/ft_puthex	\
 		printf/ft_putnbr	\
 		printf/ft_putstr	\
+		printf/ft_putptr	\
 		printf/ft_putunsigned
 		
 NAME	=	libft.a
@@ -76,7 +77,7 @@ OBJS =	$(OBJS_PATH)$(addsuffix .o, $(FILES))
 
 $(NAME): $(OBJS)
 	@$(AR) $@ $^
-	make clean
+	@make clean
 
 all: $(NAME)
 

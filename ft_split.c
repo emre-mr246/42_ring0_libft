@@ -6,7 +6,7 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 11:09:41 by emgul             #+#    #+#             */
-/*   Updated: 2023/12/10 22:35:47 by emgul            ###   ########.fr       */
+/*   Updated: 2024/05/21 16:51:05 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	**ft_split(char const *s, char c)
 	size_t	word_length;
 	int		i;
 
-	if (!s || !c)
+	if (!s || !c)
 		return (NULL);
 	result = (char **)malloc((ft_countwords(s, c) + 1) * sizeof(char *));
 	if (!result)

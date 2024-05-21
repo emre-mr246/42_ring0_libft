@@ -6,15 +6,14 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 19:52:50 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/04 17:06:15 by emgul            ###   ########.fr       */
+/*   Updated: 2024/05/21 16:48:58 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "../libft.h"
 #include <stdint.h>
 #include <unistd.h>
 #include <stdarg.h>
-#include <stdint.h>
 
 int	ft_ptrlen(uintptr_t num)
 {
