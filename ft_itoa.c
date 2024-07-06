@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+ * @brief Converts an integer to a null-terminated string.
+ *
+ * @param nbr The integer to convert.
+ * @return A pointer to the allocated string containing the converted integer, or NULL if allocation fails.
+ */
 static int	ft_numlen(long nbr)
 {
 	int	len;

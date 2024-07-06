@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*
+ * @brief Checks whether the given character
+  is alphanumeric (alphabetic or numeric).
+ *
+ * @param c The character to check.
+ * @return 1 if the character is alphanumeric, 0 otherwise.
+ */
 int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));

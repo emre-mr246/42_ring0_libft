@@ -12,6 +12,12 @@
 
 #include <stdlib.h>
 
+/*
+ * @brief Sets the first n bytes of the memory pointed to by str to zero.
+ *
+ * @param str Pointer to the memory block to be zeroed.
+ * @param n   Number of bytes to be zeroed.
+ */
 void	ft_bzero(void *str, size_t n)
 {
 	char	*ptr;

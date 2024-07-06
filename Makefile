@@ -6,78 +6,78 @@
 #    By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 09:44:14 by emgul             #+#    #+#              #
-#    Updated: 2024/07/06 18:03:17 by emgul            ###   ########.fr        #
+#    Updated: 2024/07/06 19:15:57 by emgul            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FILES	=	ft_atoi \
-		ft_bzero \
-		ft_calloc \
-		ft_isalnum \
-		ft_isalpha \
-		ft_isascii \
-		ft_isdigit \
-		ft_isprint \
-		ft_itoa \
-		ft_memchr \
-		ft_memcmp \
-		ft_memcpy \
-		ft_memmove \
-		ft_memset \
-		ft_putchar_fd \
-		ft_putendl_fd \
-		ft_putnbr_fd \
-		ft_putstr_fd \
-		ft_split \
-		ft_strchr \
-		ft_strdup \
-		ft_striteri \
-		ft_strjoin \
-		ft_strlcat \
-		ft_strlcpy \
-		ft_strlen \
-		ft_strmapi \
-		ft_strncmp \
-		ft_strnstr \
-		ft_strrchr \
-		ft_strtrim \
-		ft_substr \
-		ft_tolower \
-		ft_toupper	\
-		ft_lstadd_back \
-		ft_lstadd_front \
-		ft_lstclear \
-		ft_lstdelone \
-		ft_lstiter \
-		ft_lstlast \
-		ft_lstmap \
-		ft_lstnew \
-		ft_lstsize \
-		gnl/get_next_line	\
-		gnl/get_next_line_utils	\
-		printf/ft_printf	\
-		printf/ft_format_utilities	\
-		printf/ft_puthex	\
-		printf/ft_putnbr	\
-		printf/ft_putstr	\
-		printf/ft_putptr	\
-		printf/ft_putunsigned
+			ft_bzero \
+			ft_calloc \
+			ft_isalnum \
+			ft_isalpha \
+			ft_isascii \
+			ft_isdigit \
+			ft_isprint \
+			ft_itoa \
+			ft_memchr \
+			ft_memcmp \
+			ft_memcpy \
+			ft_memmove \
+			ft_memset \
+			ft_putchar_fd \
+			ft_putendl_fd \
+			ft_putnbr_fd \
+			ft_putstr_fd \
+			ft_split \
+			ft_strchr \
+			ft_strdup \
+			ft_striteri \
+			ft_strjoin \
+			ft_strlcat \
+			ft_strlcpy \
+			ft_strlen \
+			ft_strmapi \
+			ft_strncmp \
+			ft_strnstr \
+			ft_strrchr \
+			ft_strtrim \
+			ft_substr \
+			ft_tolower \
+			ft_toupper	\
+			ft_lstadd_back \
+			ft_lstadd_front \
+			ft_lstclear \
+			ft_lstdelone \
+			ft_lstiter \
+			ft_lstlast \
+			ft_lstmap \
+			ft_lstnew \
+			ft_lstsize \
+			gnl/get_next_line	\
+			gnl/get_next_line_utils	\
+			printf/ft_printf	\
+			printf/ft_format_utilities	\
+			printf/ft_puthex	\
+			printf/ft_putnbr	\
+			printf/ft_putstr	\
+			printf/ft_putptr	\
+			printf/ft_putunsigned
 		
 NAME	=	libft.a
-CC	=	gcc
-CFLAGS	=	#-Wall -Wextra -Werror
-AR	=	ar rcs
-RM	=	rm -f
+CC	=		gcc
+CFLAGS	=	-Wall -Wextra -Werror
+AR	=		ar rcs
+RM	=		rm -f
 
 SRCS	=	$(addsuffix .c, $(FILES))
-OBJS =	$(OBJS_PATH)$(addsuffix .o, $(FILES))
+OBJS 	=	$(OBJS_PATH)$(addsuffix .o, $(FILES))
 
-.c.o: $(SRCS)
+.c.o:
 	@$(CC) $(CFLAGS) -c $< -o $@ 
 
 $(NAME): $(OBJS)
 	@$(AR) $@ $^
-	@make clean
+	@make --no-print-directory clean
 
 all: $(NAME)
 

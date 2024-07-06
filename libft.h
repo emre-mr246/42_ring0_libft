@@ -26,6 +26,13 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+typedef struct s_format
+{
+	char	specifier;
+	int		specifier_index;
+	int		printed_chars;
+}	t_format;
+
 // NUMBER
 int			ft_atoi(const char *str);
 char		*ft_itoa(int nbr);
@@ -34,6 +41,7 @@ int			ft_isalpha(int c);
 int			ft_isascii(int c);
 int			ft_isdigit(int c);
 int			ft_isprint(int c);
+
 
 // LIST
 t_list		*ft_lstlast(t_list *lst);
@@ -82,14 +90,7 @@ char		*get_next_line(int fd);
 char		*ft_strjoin_gnl(char *left_str, char *buff);
 char		*ft_strncpy_gnl(char *dest, char *src, unsigned int n);
 
-//	PRINTF
-typedef struct s_format
-{
-	char	specifier;
-	int		specifier_index;
-	int		printed_chars;
-}	t_format;
-
+// PRINTF
 int			ft_printf(const char *input, ...);
 int			ft_check_specifier(char *input);
 int			ft_find_specifier_index(char *input);
