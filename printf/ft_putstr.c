@@ -6,14 +6,12 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 19:52:32 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/04 17:06:17 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/06 18:53:24 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <unistd.h>
-#include <stdarg.h>
-#include <stdint.h>
 
 int	ft_putchar(char c)
 {

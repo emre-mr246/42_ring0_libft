@@ -6,15 +6,14 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 19:52:53 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/04 17:06:11 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/06 18:53:48 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <unistd.h>
-#include <stdint.h>
 
-int	ft_hexlen(unsigned	int num)
+static int	ft_hexlen(unsigned	int num)
 {
 	int	len;
 
@@ -27,7 +26,7 @@ int	ft_hexlen(unsigned	int num)
 	return (len);
 }
 
-void	ft_print_hexadecimal(unsigned int num, t_format *f)
+static void	ft_print_hexadecimal(unsigned int num, t_format *f)
 {
 	if (num >= 16)
 	{

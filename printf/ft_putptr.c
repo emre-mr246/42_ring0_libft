@@ -6,16 +6,15 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 19:52:50 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/21 16:48:58 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/06 18:53:33 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <stdint.h>
 #include <unistd.h>
-#include <stdarg.h>
 
-int	ft_ptrlen(uintptr_t num)
+static int	ft_ptrlen(uintptr_t num)
 {
 	int	len;
 
@@ -28,7 +27,7 @@ int	ft_ptrlen(uintptr_t num)
 	return (len);
 }
 
-void	ft_print_pointer(uintptr_t num, t_format *f)
+static void	ft_print_pointer(uintptr_t num, t_format *f)
 {
 	if (num >= 16)
 		ft_print_pointer(num / 16, f);

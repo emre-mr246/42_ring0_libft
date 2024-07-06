@@ -6,17 +6,14 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 08:03:49 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/04 17:06:03 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/06 18:53:53 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <unistd.h>
-#include <stdlib.h>
-#include <stdarg.h>
-#include <stdint.h>
 
-int	ft_format_specifier(char *input, va_list args, int *i)
+static int	ft_format_specifier(char *input, va_list args, int *i)
 {
 	t_format	*f;
 	int			printed_chars;

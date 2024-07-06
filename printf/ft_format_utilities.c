@@ -6,13 +6,11 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 09:12:26 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/04 17:06:08 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/06 18:55:43 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdarg.h>
-#include <stdint.h>
 #include <unistd.h>
 
 t_format	*ft_initialize_format(void)
@@ -53,18 +51,7 @@ int	ft_find_specifier_index(char *input)
 	return (specifier_index);
 }
 
-int	ft_check_specifier(char *input)
-{
-	char	*specifiers;
-
-	specifiers = "%cspdiuxX";
-	if (ft_strchrs(input, specifiers))
-		return (1);
-	else
-		return (0);
-}
-
-int	ft_strchrs(char *haystack, char *needles)
+static int	ft_strchrs(char *haystack, char *needles)
 {
 	int	i;
 	int	j;
@@ -78,6 +65,17 @@ int	ft_strchrs(char *haystack, char *needles)
 				return (1);
 	}
 	return (0);
+}
+
+int	ft_check_specifier(char *input)
+{
+	char	*specifiers;
+
+	specifiers = "%cspdiuxX";
+	if (ft_strchrs(input, specifiers))
+		return (1);
+	else
+		return (0);
 }
 
 void	ft_print_format(t_format *f, va_list args)

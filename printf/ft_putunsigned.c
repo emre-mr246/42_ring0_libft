@@ -6,13 +6,11 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 15:46:39 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/04 17:06:19 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/06 18:55:06 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdarg.h>
-#include <stdint.h>
 
 static void	ft_print_unbr(unsigned int nb, t_format *f)
 {
@@ -26,13 +24,7 @@ static void	ft_print_unbr(unsigned int nb, t_format *f)
 	ft_putchar((nb % 10) + '0');
 }
 
-void	ft_putunsigned(unsigned int nb, t_format *f)
-{
-	ft_print_unbr(nb, f);
-	f->printed_chars += ft_number_len(nb);
-}
-
-int	ft_number_len(long nbr)
+static int	ft_number_len(long nbr)
 {
 	int	len;
 
@@ -47,4 +39,10 @@ int	ft_number_len(long nbr)
 		len++;
 	}
 	return (len);
+}
+
+void	ft_putunsigned(unsigned int nb, t_format *f)
+{
+	ft_print_unbr(nb, f);
+	f->printed_chars += ft_number_len(nb);
 }

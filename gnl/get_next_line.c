@@ -6,15 +6,14 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 22:01:08 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/04 16:55:33 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/06 18:57:33 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <unistd.h>
-#include <stdlib.h>
 
-char	*ft_append_to_left(int fd, char *input_str)
+static char	*ft_append_to_left(int fd, char *input_str)
 {
 	char	*buffer;
 	int		bytes_read;
@@ -40,7 +39,7 @@ char	*ft_append_to_left(int fd, char *input_str)
 	return (input_str);
 }
 
-char	*ft_get_line(char *input_str)
+static char	*ft_get_line(char *input_str)
 {
 	char	*newline_ptr;
 	char	*string;
@@ -61,7 +60,7 @@ char	*ft_get_line(char *input_str)
 	return (string);
 }
 
-char	*ft_extract_after_newline(char *input_str)
+static char	*ft_extract_after_newline(char *input_str)
 {
 	char	*start;
 	char	*result;

@@ -6,12 +6,11 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 22:01:00 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/04 16:52:12 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/06 18:52:29 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdlib.h>
 
 char	*ft_strjoin_gnl(char *input_str, char *buffer)
 {

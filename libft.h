@@ -26,13 +26,6 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-typedef struct s_format
-{
-	char	specifier;
-	int		specifier_index;
-	int		printed_chars;
-}	t_format;
-
 // NUMBER
 int			ft_atoi(const char *str);
 char		*ft_itoa(int nbr);
@@ -86,13 +79,21 @@ int			ft_toupper(int c);
 
 // GET_NEXT_LINE
 char		*get_next_line(int fd);
-char		*ft_get_line(char *input_str);
-char		*ft_append_to_left(int fd, char *input_str);
-char		*ft_extract_after_newline(char *input_str);
 char		*ft_strjoin_gnl(char *left_str, char *buff);
 char		*ft_strncpy_gnl(char *dest, char *src, unsigned int n);
 
 //	PRINTF
+typedef struct s_format
+{
+	char	specifier;
+	int		specifier_index;
+	int		printed_chars;
+}	t_format;
+
+int			ft_printf(const char *input, ...);
+int			ft_check_specifier(char *input);
+int			ft_find_specifier_index(char *input);
+int			ft_putchar(char c);
 t_format	*ft_initialize_format(void);
 void		ft_print_format(t_format *f, va_list args);
 void		ft_putnbr(int n, t_format *f);
@@ -100,12 +101,5 @@ void		ft_putstr(char *str, t_format *f);
 void		ft_putptr(unsigned long long ptr, t_format *f);
 void		ft_puthex(unsigned int num, t_format *f);
 void		ft_putunsigned(unsigned int nb, t_format *f);
-int			ft_printf(const char *input, ...);
-int			ft_check_specifier(char *input);
-int			ft_find_specifier_index(char *input);
-int			ft_strchrs(char *haystack, char *needles);
-int			ft_format_specifier(char *input, va_list args, int *i);
-int			ft_number_len(long nbr);
-int			ft_putchar(char c);
 
 #endif
