@@ -21,7 +21,7 @@
 
 The project aims to promote a thorough comprehension of essential C functions, empowering students to develop their own implementations. Furthermore, libft will be utilized in upcoming Ecole 42 projects.
 
-## Functions in libft
+## Functions in libft 📚
 
 Functions from <ctype.h>
 
