@@ -16,6 +16,8 @@ void	ft_bzero(void *str, size_t n)
 {
 	char	*ptr;
 
+	if (!str)
+		return ;
 	ptr = str;
 	while (n-- > 0)
 		*ptr++ = 0;
