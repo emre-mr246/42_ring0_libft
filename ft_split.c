@@ -6,7 +6,7 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 11:09:41 by emgul             #+#    #+#             */
-/*   Updated: 2024/05/21 16:51:05 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/06 18:35:39 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ static size_t	ft_countwords(char const *s, char c)
 {
 	size_t	word_count;
 
-	if (!*s)
-		return (0);
 	word_count = 0;
 	while (*s)
 	{
@@ -31,15 +29,13 @@ static size_t	ft_countwords(char const *s, char c)
 	return (word_count);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**ft_split_main(char *s, char c, size_t word_count)
 {
 	char	**result;
 	size_t	word_length;
 	int		i;
 
-	if (!s || !c)
-		return (NULL);
-	result = (char **)malloc((ft_countwords(s, c) + 1) * sizeof(char *));
+	result = (char **)ft_calloc(sizeof(char *), (word_count + 1));
 	if (!result)
 		return (NULL);
 	i = 0;
@@ -57,5 +53,29 @@ char	**ft_split(char const *s, char c)
 			s += word_length;
 		}
 	}
-	return (result[i] = NULL, result);
+	return (result);
+}
+
+char	**ft_split(char *s, char c)
+{
+	char	**result;
+	size_t	word_count;
+
+	if (!s)
+		return (NULL);
+	if (!*s)
+		return ((char **)ft_calloc(sizeof(char *), 1));
+	if (!c)
+	{
+		result = (char **)ft_calloc(sizeof(char *), 2);
+		if (!result)
+			return (NULL);
+		result[0] = ft_strdup(s);
+		return (result);
+	}
+	word_count = ft_countwords(s, c);
+	if (word_count == 0)
+		return ((char **)ft_calloc(sizeof(char *), 1));
+	result = ft_split_main(s, c, word_count);
+	return (result);
 }

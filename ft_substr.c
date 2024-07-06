@@ -26,7 +26,7 @@ static char	*str_new(size_t n)
 {
 	char	*str;
 
-	str = (char *)malloc(sizeof(char) * (n + 1));
+	str = (char *)ft_calloc(sizeof(char), (n + 1));
 	if (!str)
 		return (NULL);
 	return (str);
@@ -34,22 +34,23 @@ static char	*str_new(size_t n)
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*str;
-	char	*str_ptr;
+	char	*substr;
+	char	*substr_ptr;
+	size_t	s_len;
 
 	if (!s)
 		return (NULL);
-	if (start > str_len(s))
-		len = 0;
-	else if (len > (str_len(s) - start))
-		len = str_len(s) - start;
-	str = str_new(len);
-	if (!str)
+	s_len = str_len(s);
+	if (start >= s_len)
+		return (str_new(0));
+	else if (len > (s_len - start))
+		len = s_len - start;
+	substr = str_new(len);
+	if (!substr)
 		return (NULL);
 	s += start;
-	str_ptr = str;
-	*(str + len) = '\0';
+	substr_ptr = substr;
 	while (len-- && *s)
-		*str++ = *s++;
-	return (str_ptr);
+		*substr++ = *s++;
+	return (substr_ptr);
 }

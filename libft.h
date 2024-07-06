@@ -2,14 +2,11 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+
-	+:+     */
-/*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+
-	+#+        */
-/*                                                +#+#+#+#+#+
-	+#+           */
+/*                                                    +:+ +:+         +:+     */
+/*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 06:14:35 by emgul             #+#    #+#             */
-/*   Updated: 2023/12/01 06:14:35 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/06 11:34:14 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +71,7 @@ void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 size_t		ft_strlcat(char *dst, const char *src, size_t n);
 size_t		ft_strlcpy(char *dst, const char *src, size_t n);
 size_t		ft_strlen(const char *s);
-char		**ft_split(char const *s, char c);
+char		**ft_split(char *s, char c);
 char		*ft_strchr(char *s, int c);
 char		*ft_strdup(char *src);
 char		*ft_strjoin(char const *s1, char const *s2);

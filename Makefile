@@ -6,7 +6,7 @@
 #    By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 09:44:14 by emgul             #+#    #+#              #
-#    Updated: 2024/05/21 16:54:28 by emgul            ###   ########.fr        #
+#    Updated: 2024/07/06 18:03:17 by emgul            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,7 @@ FILES	=	ft_atoi \
 		
 NAME	=	libft.a
 CC	=	gcc
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	#-Wall -Wextra -Werror
 AR	=	ar rcs
 RM	=	rm -f
 
