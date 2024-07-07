@@ -6,7 +6,7 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 11:09:41 by emgul             #+#    #+#             */
-/*   Updated: 2024/07/07 15:05:32 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/07 15:38:21 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static size_t	ft_countwords(char const *s, char c)
 {
-	size_t	word_count;
+	size_t		word_count;
 
 	word_count = 0;
 	while (*s)
@@ -79,3 +79,11 @@ char	**ft_split(char *s, char c)
 	result = ft_split_main(s, c, word_count);
 	return (result);
 }
+
+// int main()
+// {
+// 	char **test;
+
+// 	test = ft_split("hello!", ' ');
+// 	int a;
+// }

@@ -6,7 +6,7 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 14:41:02 by emgul             #+#    #+#             */
-/*   Updated: 2024/07/07 15:05:32 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/07 15:19:08 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strrchr(char *str, int c)
 {
 	char	*last_char_pos;
 
+	if (!str)
+		return (NULL);
 	last_char_pos = NULL;
 	while (*str)
 	{

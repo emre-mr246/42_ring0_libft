@@ -6,7 +6,7 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 09:14:35 by emgul             #+#    #+#             */
-/*   Updated: 2024/07/07 15:05:32 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/07 15:22:52 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*result;
 	size_t	result_len;
 
+	if (!s1 || !s2)
+		return (NULL);
 	result_len = ft_strlen(s1) + ft_strlen(s2);
 	result = (char *)malloc(sizeof(char) * (result_len + 1));
 	if (result == NULL)
