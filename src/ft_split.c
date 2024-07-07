@@ -6,11 +6,11 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 11:09:41 by emgul             #+#    #+#             */
-/*   Updated: 2024/07/07 14:41:53 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/07 15:05:32 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../inc/libft.h"
 
 static size_t	ft_countwords(char const *s, char c)
 {

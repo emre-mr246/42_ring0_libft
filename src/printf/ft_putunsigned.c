@@ -6,11 +6,11 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 15:46:39 by emgul             #+#    #+#             */
-/*   Updated: 2024/07/07 14:53:55 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/07 15:06:17 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "../../inc/libft.h"
 
 static void	ft_print_unbr(unsigned int nb, t_format *f)
 {

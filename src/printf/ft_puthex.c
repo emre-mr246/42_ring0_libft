@@ -6,11 +6,11 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 19:52:53 by emgul             #+#    #+#             */
-/*   Updated: 2024/07/07 14:53:39 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/07 15:06:10 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "../../inc/libft.h"
 #include <unistd.h>
 
 static int	ft_hexlen(unsigned	int num)

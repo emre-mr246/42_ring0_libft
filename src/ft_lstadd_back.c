@@ -6,11 +6,11 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 16:50:55 by emgul             #+#    #+#             */
-/*   Updated: 2024/07/07 14:42:34 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/07 15:05:32 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../inc/libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {

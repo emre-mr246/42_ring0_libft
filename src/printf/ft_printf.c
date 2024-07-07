@@ -6,11 +6,11 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 08:03:49 by emgul             #+#    #+#             */
-/*   Updated: 2024/07/07 14:53:30 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/07 15:06:09 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "../../inc/libft.h"
 #include <unistd.h>
 
 static int	ft_format_specifier(char *input, va_list args, int *i)

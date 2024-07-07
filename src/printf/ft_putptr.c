@@ -6,11 +6,11 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 19:52:50 by emgul             #+#    #+#             */
-/*   Updated: 2024/07/07 14:53:50 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/07 15:06:13 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "../../inc/libft.h"
 #include <stdint.h>
 #include <unistd.h>
 

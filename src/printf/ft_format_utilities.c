@@ -6,11 +6,11 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 09:12:26 by emgul             #+#    #+#             */
-/*   Updated: 2024/07/07 14:53:34 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/07 15:06:07 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "../../inc/libft.h"
 #include <unistd.h>
 
 t_format	*ft_initialize_format(void)

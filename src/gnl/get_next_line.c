@@ -6,11 +6,11 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 22:01:08 by emgul             #+#    #+#             */
-/*   Updated: 2024/07/07 14:43:36 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/07 15:06:02 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#include "../../inc/libft.h"
 #include <unistd.h>
 
 static char	*ft_append_to_left(int fd, char *input_str)

@@ -6,11 +6,11 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 09:14:35 by emgul             #+#    #+#             */
-/*   Updated: 2024/07/07 14:42:02 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/07 15:05:32 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../inc/libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

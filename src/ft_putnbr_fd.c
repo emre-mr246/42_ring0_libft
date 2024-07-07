@@ -6,11 +6,11 @@
 /*   By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 08:53:23 by emgul             #+#    #+#             */
-/*   Updated: 2024/07/07 14:41:46 by emgul            ###   ########.fr       */
+/*   Updated: 2024/07/07 15:05:32 by emgul            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../inc/libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
