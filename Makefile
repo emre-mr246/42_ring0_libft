@@ -6,7 +6,7 @@
 #    By: emgul <emgul@student.42istanbul.com.tr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 09:44:14 by emgul             #+#    #+#              #
-#    Updated: 2024/07/06 19:15:57 by emgul            ###   ########.fr        #
+#    Updated: 2024/07/07 14:58:38 by emgul            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,30 +63,44 @@ FILES	=	ft_atoi \
 			printf/ft_putptr	\
 			printf/ft_putunsigned
 		
-NAME	=	libft.a
-CC	=		gcc
-CFLAGS	=	-Wall -Wextra -Werror
-AR	=		ar rcs
-RM	=		rm -f
+NAME			=	libft.a
 
-SRCS	=	$(addsuffix .c, $(FILES))
-OBJS 	=	$(OBJS_PATH)$(addsuffix .o, $(FILES))
+CC				=	gcc
+CFLAGS			=	-I $(LIBFT_PATH) -Wall -Wextra -Werror
+MFLAGS			=	-s -C
+AR				=	ar rcs
+RM				=	rm -rf
+
+FILES_PATH		=	src/
+
+SRCS            =   $(addprefix $(FILES_PATH), $(addsuffix .c, $(FILES)))
+OBJS            =   $(SRCS:.c=.o)
 
 .c.o:
-	@$(CC) $(CFLAGS) -c $< -o $@ 
+	@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
-$(NAME): $(OBJS)
+$(NAME): $(LIBFT) $(OBJS)
 	@$(AR) $@ $^
-	@make --no-print-directory clean
+	@echo "$(GREEN)-== $(NAME) created! ==-$(DEFAULT)"
 
 all: $(NAME)
 
 clean:
 	@$(RM) $(OBJS)
+	@echo "$(YELLOW)-== all object files deleted! -==$(DEFAULT)"
 
 fclean: clean
 	@$(RM) $(NAME)
+	@echo "$(RED)-== all files deleted! -==$(DEFAULT)"
 
-re: clean all
+re: fclean all
 
-.PHONY: all re fclean clean
+.PHONY: all clean fclean re
+
+# ANSI COLOR CODES
+DEFAULT = \033[0m
+RED = \033[1;31m
+YELLOW = \033[1;33m
+GREEN = \033[1;32m
+BLUE = \033[1;36m
+ORANGE = \033[38;5;208m
