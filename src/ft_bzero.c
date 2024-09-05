@@ -24,7 +24,7 @@ void	ft_bzero(void *str, size_t n)
 
 	if (!str)
 		return ;
-	unsigned char *ptr = (unsigned char *)str;
+	ptr = (unsigned char *)str;
 	while (n > 0)
     	{
 	        *ptr++ = 0;
