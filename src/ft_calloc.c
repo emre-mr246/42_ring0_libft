@@ -27,11 +27,11 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*result;
 	size_t	res_size;
 
-	res_size = count * size;
-	if (count > SIZE_MAX / size)
-		return (NULL);
 	if (count == 0 || size == 0)
 		return (malloc(0));
+	if (count > SIZE_MAX / size)
+		return (NULL);
+	res_size = count * size;
 	result = malloc(res_size);
 	if (!result)
 		return (NULL);
