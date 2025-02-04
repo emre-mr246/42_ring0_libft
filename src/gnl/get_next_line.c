@@ -33,7 +33,7 @@ static char	*ft_append_to_left(int fd, char *input_str)
 		if (bytes_read == -1)
 			break ;
 		buffer[bytes_read] = '\0';
-		input_str = ft_strjoin(input_str, buffer);
+		input_str = ft_strjoin_gnl(input_str, buffer);
 	}
 	free(buffer);
 	return (input_str);
@@ -90,9 +90,9 @@ static char	*ft_extract_after_newline(char *input_str)
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*input_str[4096];
+	static char	*input_str[1024];
 
-	if (fd < 0 || fd > 10240 || BUFFER_SIZE <= 0)
+	if (fd < 0 || fd > 1024 || BUFFER_SIZE <= 0)
 		return (NULL);
 	input_str[fd] = ft_append_to_left(fd, input_str[fd]);
 	if (!input_str[fd])
